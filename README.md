@@ -28,7 +28,3 @@ A program that determines the types of all expressions in the abstract syntax tr
 
 ## proj6: Code Generator
 A program that generates MIPS assembly level code for a cdull program.
-
-Authors:
-
-Harsha Kodavalla
