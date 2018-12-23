@@ -18,7 +18,6 @@
  */
 
 
-package Program1;
 // Tests the SymTable and Sym classes
 public class P1 {
 	// Data members used by the symbol table testing methods
@@ -91,7 +90,7 @@ public class P1 {
 	 * to an empty symbol table. If ESE is not thrown, print an error message.
 	 */
 	static void emptyTableAddDeclTest() {
-		// Reset the symbol table 
+		// Empty the symbol table
 		symtab = new SymTable();
 		try {
 			symtab.removeScope();
@@ -109,7 +108,7 @@ public class P1 {
 			}
 			thrown = false;
 		}
-		// Reset the symbol table 
+		// Empty the symbol table 
 		symtab = new SymTable();
 	}
 	
@@ -118,7 +117,7 @@ public class P1 {
 	 * a scope from an empty table. If ESE is not thrown, print an error message.
 	 */
 	static void emptyTableRemoveScopeTest() {
-		// Reset the symbol table 
+		// Empty the symbol table 
 		symtab = new SymTable();
 		try {
 			symtab.removeScope();
@@ -133,7 +132,7 @@ public class P1 {
 			}
 			thrown = false;
 		}
-		// Reset the symbol table 
+		// Empty the symbol table 
 		symtab = new SymTable();
 	}
 
@@ -143,7 +142,7 @@ public class P1 {
 	 * Ensures addDecl does not add the duplicate key to the table.
 	 */
 	static void duplicateAddDeclTest() {
-		// Reset the symbol table 
+		// Empty the symbol table 
 		symtab = new SymTable();
 		
 		String duplicateKeyName = "temp";
@@ -180,7 +179,7 @@ public class P1 {
 					"exception thrown by lookupLocal.");
 		}
 		
-		// Reset the symbol table 
+		// Empty the symbol table 
 		symtab = new SymTable();
 	}
 	
@@ -189,7 +188,7 @@ public class P1 {
 	 * Ensure lookups are correctly locating entries.
 	 */
 	static void addLookupTest() {
-		// Reset the symbol table 
+		// Empty the symbol table 
 		symtab = new SymTable();
 		
 		try {
@@ -251,7 +250,7 @@ public class P1 {
 			System.out.println("addLookupTest() ERROR - exception thrown.");
 		}
 		
-		// Reset the symbol table 
+		// Empty the symbol table 
 		symtab = new SymTable();
 	}
 	
@@ -259,7 +258,7 @@ public class P1 {
 	 * Ensure removeScope removes scopes correctly
 	 */
 	static void removeScopeTest() {
-		// Reset the symbol table 
+		// Empty the symbol table 
 		symtab = new SymTable();
 		
 		try {
@@ -298,7 +297,7 @@ public class P1 {
 		} catch (Exception e) {
 			System.out.println("removeScopeTest() ERROR - exception thrown.");
 		}
-		// Reset the symbol table 
+		// Empty the symbol table 
 		symtab = new SymTable();
 	}
 	
@@ -311,7 +310,7 @@ public class P1 {
 	 * and an empty outermost scope.
 	 */
 	static void printTest() {
-		// Reset the symbol table 
+		// Empty the symbol table 
 		symtab = new SymTable();
 		
 		System.out.println("Print test:");
@@ -328,7 +327,7 @@ public class P1 {
 		}
 		symtab.print();
 		
-		// Reset the symbol table 
+		// Empty the symbol table 
 		symtab = new SymTable();
 	}
 }
