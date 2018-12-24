@@ -1,0 +1,68 @@
+// Test var declarations
+struct a b; struct c d;
+
+// Test struct declarations
+struct testStruct {
+    struct e f; struct x y;
+    bool testVar1;
+    int testVar2;
+    void testVar3;
+};
+// Test more var declarations
+int var1;
+int var2;
+bool var3;
+void var4;int var5;
+
+// Test empty function 
+void emptyFn(){}
+
+// Test functions with body
+int testFn1(int formal1,void formal2, bool formal3     ){int fnVar1;bool fnVar2; struct a b; if(a > b){return;}}
+
+bool testFn2(int formal1) 
+{
+int fnVar1;
+int fnVar2;
+int fnVar3;
+
+// Test simple statements and expressions
+fnVar1 = fnVar2+fnVar3-fnVar1;
+fnVar1 = 1+2-3;
+fnVar1 = fnVar2*fnvar3/4+fnVar1;
+
+fnVar1++;
+fnVar2++;
+
+cin >> read;
+cout << write;
+
+// Test dot access
+fnVar1 = fnVar1.array.size * fnVar2.array.size;
+
+// Test simple if else and while
+if (b == -1) { x = 4+3*5-y; while (c) { y = y*2+x; } } else { x = 0; }
+
+// Test nested while and repeat loops
+while(true) {
+repeat(false) {
+return fnVar1;
+}
+}
+// Test nested if
+if(b>-1){if(b>=-1){if(b==-1){if(b<=-1){if(b<-1){return -1;}}}}}
+
+// Test nested if
+if (b != 1 || b == 2 && b != fnVar2) {
+if (! !false){
+return fnVar1.size;
+} else {
+    if (false) {return fnVar2.size;}
+}
+} else {
+    // Test function calls
+    callFirstFn();
+    callSecondFn(fnVar1, fnVar2, 5 * 5, false);
+    return;
+}
+}

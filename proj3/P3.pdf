@@ -1,0 +1,12 @@
+To compile the program:
+
+%make
+
+To test the program:
+
+%make test
+
+To clean the program:
+
+%make clean
+%make cleantest
