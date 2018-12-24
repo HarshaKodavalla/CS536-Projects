@@ -1,4 +1,4 @@
-Testing Suite for Sym and Symbol Table
+## Testing Suite for Sym and Symbol Table
 
 This program tests the Sym and Symbol Table classes located in part 2.
 
