@@ -1,0 +1,14 @@
+"it will include and test various\nportions\tofthe \"cdull\" language"
+bool
+_test1_
+>>
+<<
+cout
+"another string\? to test \\"
+12049
+100000009
+a________________________________________9
+{
+}
+&&
+||

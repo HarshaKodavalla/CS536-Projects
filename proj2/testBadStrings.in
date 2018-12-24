@@ -1,0 +1,7 @@
+"bad string number 1
+"bad \ string number 2"
+"bad \ string \ number 3
+"good string"
+identifier
+struct
+"bad string number \4

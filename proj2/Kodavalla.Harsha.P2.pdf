@@ -1,0 +1,20 @@
+Harsha Kodavalla - Programming Assignment 2
+
+To compile and run the program, execute the following commands in order:
+
+>make clean
+>make cleantest
+>make
+>make test
+
+Ensure to run
+>make cleantest
+
+every time after running make test. 
+
+Running make test will cause the scanner to analyze a variety of files containing a variety of 
+combinations of the cdull language. It will then check if the output of the scanner differs
+from the expected output. As the testing program also checks if error messages are working 
+correctly, it is important to carefully look at the output of the test file to ensure that
+ONLY the correct error messages are being printed.
+
