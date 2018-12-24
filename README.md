@@ -11,7 +11,7 @@ Each of these projects represent a part of a compiler for a small subset of the 
 ## proj1-part1: Symbol Table Test Suite
 A test suite for the symbol table that is implemented in proj1-part2.
 
-##proj1-part2: Symbol Table Implementation
+## proj1-part2: Symbol Table Implementation
 An implementation of a symbol table which will be used in the later programs.
 
 ## proj2: Scanner
