@@ -1,0 +1,185 @@
+int g_int1;
+int g_int2;
+bool g_boolT;
+bool g_boolF;
+
+// test nested function calls
+void nestTest1(int a) { 
+    a++;
+    if (a != 3) {
+        cout << "Error in nests\n";
+    }
+}
+void nestTest2(int a) { a++; nestTest1(a); }
+void nestTest3(int a) { a++; nestTest2(a); }
+void nestTest4() { int a; a = 0; nestTest3(a); }
+
+void boolTest() {
+    bool a;
+    bool b;
+    int i;
+    int j;
+
+    a = true;
+    b = false;
+
+    i = 3;
+    j = 4;
+
+    // short circuits
+    if ( ((i == j) && (i == 1/0)) || (!a && (i == 1/0)) || (!true && (j == 1/0)) ) {
+        //cout << "Error in boolTest part 1\n";
+    }
+
+    if ( ((i == j-1) || (i == 1/0)) && (true || (j == 1/0)) && (!false || (i == 1/0)) ) {
+
+    } else {
+        cout << "Error in boolTest part 2\n";
+    }
+}
+
+void callee(int a, int b, bool c) {
+    if (a != 3 || b != 5 || c) {
+        cout << "Error in calltest part1\n";
+    }
+    a++;
+    b++;
+    c = !c;
+}
+
+void callTest() {
+    int a;
+    int b;
+    bool c;
+
+    a = 3;
+    b = 5;
+    c = false;
+
+    callee(a, b, c);
+
+    if (a != 3 || b != 5 || c) {
+        cout << "Error in calltest part2\n";
+    }
+}
+
+void condGlobalTest() {
+    if (g_boolF != !g_boolT) {
+        cout << "Error in condGlobalTest part1\n";
+    } else {
+        if (g_boolT && !g_boolF) {
+
+        } else {
+            cout << "Error in condGlobalTest part2\n";
+        }
+    }
+    if (g_int1 != g_int2 / 2) {
+        cout << "Error in condGlobalTest part3\n";
+    }
+    while (g_boolF) {
+        cout << "Error in condGlobalTest part4\n";
+    }
+    while (g_int1 < 3) {
+        g_int1++;
+    }
+    if (g_int1 != 3) {
+        cout << "Error in condGlobalTest part5\n";
+    }
+}
+
+int callee2(int a, int b) {
+    return a * b;
+    a = 1/0;
+}
+
+bool callee3(bool c) {
+    return !c;
+}
+
+void retTest() {
+    int a;
+    int b;
+    bool c;
+    a = 3;
+    b = 5;
+    c = false;
+
+    if (callee2(a, b) != 15) {
+        cout << "Error in retTest part 1\n";
+    }
+    if (callee3(c) != !c) {
+        cout << "Error in retTest part 2\n";
+    }
+}
+
+void arithTest() {
+    int a;
+    int b;
+    int c;
+    a = 2;
+    b = 3;
+    c = 5;
+
+    a++;
+    if (a != 3) {
+        cout << "Error in arithTest part1\n";
+    }
+
+    a--;
+    if (a != 2) {
+        cout << "Error in arithTest part2\n";
+    }
+
+    a = a + a;
+    if (a != 4) {
+        cout << "Error in arithTest part3\n";
+    }
+
+    a = 2;
+
+    a = b + c;
+    if (a != 8) {
+        cout << "Error in arithTest part4\n";
+    }
+
+    a = 2;
+
+    a = b + c + a;
+    if (a != 10) {
+        cout << "Error in arithTest part5\n";
+    }
+
+    a = 2;
+
+    a = ((b * (c + a)) - 1) / 10;
+    if (a != 2) {
+        cout << "Error in arithTest part6\n";
+    } 
+}
+
+void stringTest() {
+    cout << "strings are printing\n";
+    if ("a" == "A" || "A" == "a" || "ab" == "abcd" || "abcd" == "ab") {
+        cout << "Error in string test part1\n";
+    }
+    if ("a" != "A" && "A" != "a" && "ab" != "abcd" && "abcd" != "ab") {
+
+    } else {
+        cout << "Error in string test part2\n";
+    }
+}
+
+void main() {
+    g_int1 = 1;
+    g_int2 = 2;
+    g_boolF = false;
+    g_boolT = true;
+
+    stringTest();
+    nestTest4();
+    boolTest();
+    callTest();
+    condGlobalTest();
+    retTest();
+    arithTest();
+}
