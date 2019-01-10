@@ -1,0 +1,56 @@
+struct Num{
+    int i;
+};
+
+struct Point{
+    int x;
+    int y;
+    struct Num n;
+};
+
+int fn1(int param1, bool param2) {
+    int i;
+    return ((-((i(int) * 5) / 3)) + param1(int));
+}
+
+void main() {
+    int a;
+    int b;
+    bool c;
+    bool d;
+    struct Point p;
+    a(int)++;
+    b(int)--;
+    cin >> a(int);
+    cin >> c(bool);
+    cout << a(int);
+    cout << c(bool);
+    cout << fn1(int,bool->int)(a(int), c(bool));
+    if (((c(bool) || d(bool)) || (true && false))) {
+        int a;
+        int b;
+        bool c;
+        bool d;
+        while ((a(int) == b(int))) {
+            int a;
+            repeat ((a(int) * 3)) {
+            }
+            if ((a(int) == 0)) {
+                int a;
+                bool c;
+                a(int) = fn1(int,bool->int)(a(int), c(bool));
+            }
+            else {
+                int a;
+                a(int) = (-((a(int) * 3) / a(int)));
+            }
+        }
+    }
+    if (("string1" != "string2")) {
+        return;
+    }
+    if ((((((p(Point)).x(int) > (p(Point)).y(int)) || ((p(Point)).x(int) > ((p(Point)).n(Num)).i(int))) || ((p(Point)).x(int) >= (p(Point)).y(int))) || ((p(Point)).y(int) <= ((p(Point)).n(Num)).i(int)))) {
+        return;
+    }
+}
+

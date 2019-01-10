@@ -1,0 +1,335 @@
+struct P{
+    int x;
+    int y;
+};
+
+void f() {
+}
+
+void g() {
+}
+
+int writeTest() {
+    int i;
+    struct P p;
+    cout << writeTest(->int);
+    cout << P(struct);
+    cout << p(P);
+    cout << f(->void);
+    if (true) {
+        struct P p;
+        cout << writeTest(->int);
+        cout << P(struct);
+        cout << p(P);
+        cout << f(->void);
+        while (true) {
+            struct P p;
+            cout << writeTest(->int);
+            cout << P(struct);
+            cout << p(P);
+            cout << f(->void);
+        }
+    }
+    return i(int);
+}
+
+int readTest() {
+    int i;
+    struct P p;
+    cin >> readTest(->int);
+    cin >> P(struct);
+    cin >> p(P);
+    if (true) {
+        struct P p;
+        cin >> readTest(->int);
+        cin >> P(struct);
+        cin >> p(P);
+        while (true) {
+            struct P p;
+            cin >> readTest(->int);
+            cin >> P(struct);
+            cin >> p(P);
+        }
+    }
+    return i(int);
+}
+
+void callee(int param1, bool param2, int param3) {
+}
+
+void caller() {
+    int i;
+    int a;
+    bool b;
+    i(int)(b(bool), a(int), b(bool));
+    callee(int,bool,int->void)(a(int), b(bool));
+    callee(int,bool,int->void)(b(bool), a(int), b(bool));
+    if (true) {
+        int i;
+        int a;
+        bool b;
+        i(int)(b(bool), a(int), b(bool));
+        callee(int,bool,int->void)(a(int), b(bool));
+        callee(int,bool,int->void)(b(bool), a(int), b(bool));
+        while (true) {
+            int i;
+            int a;
+            bool b;
+            i(int)(b(bool), a(int), b(bool));
+            callee(int,bool,int->void)(a(int), b(bool));
+            callee(int,bool,int->void)(b(bool), a(int), b(bool));
+        }
+    }
+}
+
+int retTest1() {
+    bool a;
+    a(bool) = false;
+    return;
+    return a(bool);
+    return true;
+    if (true) {
+        bool a;
+        a(bool) = false;
+        return;
+        return a(bool);
+        return true;
+        while (true) {
+            bool a;
+            a(bool) = false;
+            return;
+            return a(bool);
+            return true;
+        }
+    }
+}
+
+void retTest2() {
+    int i;
+    bool a;
+    a(bool) = false;
+    i(int) = 1;
+    return i(int);
+    return 5;
+    return a(bool);
+    return true;
+    if (true) {
+        int i;
+        bool a;
+        i(int) = 1;
+        a(bool) = false;
+        return i(int);
+        return 5;
+        return a(bool);
+        return true;
+        while (true) {
+            int i;
+            bool a;
+            i(int) = 1;
+            a(bool) = false;
+            return i(int);
+            return 5;
+            return a(bool);
+            return true;
+        }
+    }
+}
+
+void arithmeticTest() {
+    bool a;
+    bool b;
+    bool c;
+    int i;
+    i(int) = 0;
+    a(bool)++;
+    a(bool)--;
+    a(bool) = (-a(bool));
+    i(int) = ((a(bool) + b(bool)) + c(bool));
+    i(int) = ((a(bool) - b(bool)) - c(bool));
+    i(int) = ((a(bool) * b(bool)) * c(bool));
+    i(int) = ((a(bool) / b(bool)) / c(bool));
+    i(int) = ((a(bool) + b(bool)) - ((c(bool) * a(bool)) / b(bool)));
+    if (true) {
+        bool a;
+        bool b;
+        bool c;
+        int i;
+        i(int) = 0;
+        a(bool)++;
+        a(bool)--;
+        a(bool) = (-a(bool));
+        i(int) = ((a(bool) + b(bool)) + c(bool));
+        i(int) = ((a(bool) - b(bool)) - c(bool));
+        i(int) = ((a(bool) * b(bool)) * c(bool));
+        i(int) = ((a(bool) / b(bool)) / c(bool));
+        i(int) = ((a(bool) + b(bool)) - ((c(bool) * a(bool)) / b(bool)));
+        while (true) {
+            bool a;
+            bool b;
+            bool c;
+            int i;
+            i(int) = 0;
+            a(bool)++;
+            a(bool)--;
+            a(bool) = (-a(bool));
+            i(int) = ((a(bool) + b(bool)) + c(bool));
+            i(int) = ((a(bool) - b(bool)) - c(bool));
+            i(int) = ((a(bool) * b(bool)) * c(bool));
+            i(int) = ((a(bool) / b(bool)) / c(bool));
+            i(int) = ((a(bool) + b(bool)) - ((c(bool) * a(bool)) / b(bool)));
+        }
+    }
+}
+
+void relationalTest() {
+    bool a;
+    bool b;
+    a(bool) = (a(bool) < b(bool));
+    a(bool) = (a(bool) > b(bool));
+    a(bool) = (a(bool) >= b(bool));
+    a(bool) = (a(bool) <= b(bool));
+    if (true) {
+        bool a;
+        bool b;
+        a(bool) = (a(bool) < b(bool));
+        a(bool) = (a(bool) > b(bool));
+        a(bool) = (a(bool) >= b(bool));
+        a(bool) = (a(bool) <= b(bool));
+        while (true) {
+            bool a;
+            bool b;
+            a(bool) = (a(bool) < b(bool));
+            a(bool) = (a(bool) > b(bool));
+            a(bool) = (a(bool) >= b(bool));
+            a(bool) = (a(bool) <= b(bool));
+        }
+    }
+}
+
+void logicTest() {
+    int a;
+    int b;
+    bool d;
+    d(bool) = (!a(int));
+    d(bool) = (a(int) && b(int));
+    d(bool) = (a(int) || b(int));
+    if (true) {
+        int a;
+        int b;
+        bool d;
+        d(bool) = (!a(int));
+        d(bool) = (a(int) && b(int));
+        d(bool) = (a(int) || b(int));
+        while (true) {
+            int a;
+            int b;
+            bool d;
+            d(bool) = (!a(int));
+            d(bool) = (a(int) && b(int));
+            d(bool) = (a(int) || b(int));
+        }
+    }
+}
+
+void conditionalTest() {
+    int a;
+    int b;
+    if ((a(int) + b(int))) {
+        int a;
+        int b;
+        if ((a(int) / b(int))) {
+            int a;
+            int b;
+            while ((a(int) * b(int))) {
+                int a;
+                repeat (a(int)) {
+                }
+            }
+        }
+    }
+}
+
+struct X{
+    int i;
+};
+
+struct Y{
+    int j;
+};
+
+void fn1() {
+}
+
+void fn2() {
+}
+
+void equalityTest1() {
+    int a;
+    bool b;
+    struct X x;
+    struct Y y;
+    a(int) = b(bool);
+    a(int) = "string";
+    a(int) = x(X);
+    a(int) = X(struct);
+    b(bool) = a(int);
+    b(bool) = "string";
+    b(bool) = y(Y);
+    b(bool) = Y(struct);
+    b(bool) = (fn1(->void)() == fn2(->void)());
+    b(bool) = (fn1(->void)() != fn2(->void)());
+    b(bool) = (X(struct) == Y(struct));
+    b(bool) = (X(struct) != Y(struct));
+    b(bool) = (x(X) == y(Y));
+    b(bool) = (x(X) != y(Y));
+    fn1(->void) = fn2(->void);
+    X(struct) = Y(struct);
+    x(X) = y(Y);
+    if (true) {
+        int a;
+        bool b;
+        struct X x;
+        struct Y y;
+        a(int) = b(bool);
+        a(int) = "string";
+        a(int) = x(X);
+        a(int) = X(struct);
+        b(bool) = a(int);
+        b(bool) = "string";
+        b(bool) = y(Y);
+        b(bool) = Y(struct);
+        b(bool) = (fn1(->void)() == fn2(->void)());
+        b(bool) = (fn1(->void)() != fn2(->void)());
+        b(bool) = (X(struct) == Y(struct));
+        b(bool) = (X(struct) != Y(struct));
+        b(bool) = (x(X) == y(Y));
+        b(bool) = (x(X) != y(Y));
+        fn1(->void) = fn2(->void);
+        X(struct) = Y(struct);
+        x(X) = y(Y);
+        while (true) {
+            int a;
+            bool b;
+            struct X x;
+            struct Y y;
+            a(int) = b(bool);
+            a(int) = "string";
+            a(int) = x(X);
+            a(int) = X(struct);
+            b(bool) = a(int);
+            b(bool) = "string";
+            b(bool) = y(Y);
+            b(bool) = Y(struct);
+            b(bool) = (fn1(->void)() == fn2(->void)());
+            b(bool) = (fn1(->void)() != fn2(->void)());
+            b(bool) = (X(struct) == Y(struct));
+            b(bool) = (X(struct) != Y(struct));
+            b(bool) = (x(X) == y(Y));
+            b(bool) = (x(X) != y(Y));
+            fn1(->void) = fn2(->void);
+            X(struct) = Y(struct);
+            x(X) = y(Y);
+        }
+    }
+}
+

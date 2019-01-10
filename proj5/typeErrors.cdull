@@ -1,0 +1,474 @@
+///////////////////////////////////////////////////////////////////////////////
+// Test writes 
+
+struct P {
+    int x;
+    int y;
+};
+void f(){}
+void g(){}
+
+int writeTest(){
+    int i;
+
+    struct P p;
+    cout << writeTest;
+    cout << P;
+    cout << p;
+    cout << f;
+
+    if (true) {
+        struct P p;
+        cout << writeTest;
+        cout << P;
+        cout << p;
+        cout << f;
+
+        while (true) {
+            struct P p;
+            cout << writeTest;
+            cout << P;
+            cout << p;
+            cout << f;
+        }
+    }
+    return i;
+}
+///////////////////////////////////////////////////////////////////////////////
+// Test reads
+int readTest(){
+    int i;
+
+    struct P p;
+    cin >> readTest;
+    cin >> P;
+    cin >> p;
+
+    if (true) {
+        struct P p;
+        cin >> readTest;
+        cin >> P;
+        cin >> p;
+
+        while (true) {
+            struct P p;
+            cin >> readTest;
+            cin >> P;
+            cin >> p;
+        }
+    }
+    return i;
+}
+///////////////////////////////////////////////////////////////////////////////
+// Test calls
+void callee(int param1, bool param2, int param3){}
+
+void caller() {
+    int i;
+
+    int a;
+    bool b;
+
+    i(b, a, b);
+    callee(a, b);
+    callee(b, a, b);
+
+    if (true) {
+        int i;
+
+        int a;
+        bool b;
+
+        i(b, a, b);
+        callee(a, b);
+        callee(b, a, b);
+
+        while (true) {
+            int i;
+
+            int a;
+            bool b;
+
+            i(b, a, b);
+            callee(a, b);
+            callee(b, a, b);
+        }
+    }
+}
+///////////////////////////////////////////////////////////////////////////////
+// Test returns
+int retTest1() {
+    bool a;
+    a = false;
+
+    return;
+    return a;
+    return true;
+
+    if (true) {
+        bool a;
+        a = false;
+
+        return;
+        return a;
+        return true;
+
+        while (true) {
+            bool a;
+            a = false;
+
+            return;
+            return a;
+            return true;
+        }
+    }
+}
+
+void retTest2() {
+    int i;
+    bool a;
+
+    a = false;
+    i = 1;
+
+    return i;
+    return 5;
+    return a;
+    return true;
+
+    if (true) {
+        int i;
+        bool a;
+
+        i = 1;
+        a = false;
+
+        return i;
+        return 5;
+        return a;
+        return true;
+
+        while (true) {
+            int i;
+            bool a;
+
+            i = 1;
+            a = false;
+
+            return i;
+            return 5;
+            return a;
+            return true;
+        }
+    }
+}
+///////////////////////////////////////////////////////////////////////////////
+// Test operators
+
+void arithmeticTest() {
+    bool a;
+    bool b;
+    bool c;
+    int i;
+
+    i = 0;
+
+    a++;
+    a--;
+    a = -a; // NOTE: since there is no cascading, do not expect mismatch
+    i = a + b + c;
+    i = a - b - c;
+    i = a * b * c;
+    i = a / b / c;
+    i = a + b - c * a / b;
+
+    if (true) {
+        bool a;
+        bool b;
+        bool c;
+        int i;
+
+        i = 0;
+
+        a++;
+        a--;
+        a = -a; // NOTE: since there is no cascading,do not expect mismatch
+        i = a + b + c;
+        i = a - b - c;
+        i = a * b * c;
+        i = a / b / c;
+        i = a + b - c * a / b;
+
+        while (true) {
+            bool a;
+            bool b;
+            bool c;
+            int i;
+
+            i = 0;
+
+            a++;
+            a--;
+            a = -a; // NOTE: since there is no cascading,do not expect mismatch
+            i = a + b + c;
+            i = a - b - c;
+            i = a * b * c;
+            i = a / b / c;
+            i = a + b - c * a / b;
+        }
+    }
+}
+
+void relationalTest() {
+    bool a;
+    bool b;
+
+    a = a < b;
+    a = a > b;
+    a = a >= b;
+    a = a <= b;
+
+    if (true) {
+        bool a;
+        bool b;
+
+        a = a < b;
+        a = a > b;
+        a = a >= b;
+        a = a <= b;
+
+        while (true) {
+            bool a;
+            bool b;
+
+            a = a < b;
+            a = a > b;
+            a = a >= b;
+            a = a <= b;
+        }        
+    }
+}
+
+void logicTest() {
+    int a;
+    int b;
+    bool d;
+
+    d = !a;
+    d = a && b;
+    d = a || b;
+
+    if (true) {
+        int a;
+        int b;
+        bool d;
+
+        d = !a;
+        d = a && b;
+        d = a || b;
+
+        while (true) {
+            int a;
+            int b;
+            bool d;
+
+            d = !a;
+            d = a && b;
+            d = a || b;
+        }
+    }
+}
+
+void conditionalTest() {
+    int a;
+    int b;
+
+    if (a + b) {
+        int a;
+        int b;
+
+        if (a / b) {
+            int a; 
+            int b;
+
+            while (a * b) {
+                int a;
+
+                repeat(true && false){}
+            }
+        }
+    }
+}
+///////////////////////////////////////////////////////////////////////////////
+// Test equalities
+
+struct X {
+    int i;
+};
+struct Y {
+    int j;
+};
+
+void fn1(){}
+void fn2(){}
+
+void equalityTest1() {
+    int a;
+    bool b;
+    struct X x;
+    struct Y y;
+
+    a = b;
+    a = "string";
+    a = x;
+    a = X;
+
+    b = a;
+    b = "string";
+    b = y;
+    b = Y;
+
+    b = fn1() == fn2();
+    b = fn1() != fn2();
+    b = X == Y;
+    b = X != Y;
+    b = x == y;
+    b = x != y;
+
+    fn1 = fn2;
+    X = Y;
+    x = y;
+
+    if (true) {
+        int a;
+        bool b;
+        struct X x;
+        struct Y y;
+
+        a = b;
+        a = "string";
+        a = x;
+        a = X;
+
+        b = a;
+        b = "string";
+        b = y;
+        b = Y;
+
+        b = fn1() == fn2();
+        b = fn1() != fn2();
+        b = X == Y;
+        b = X != Y;
+        b = x == y;
+        b = x != y;
+
+        fn1 = fn2;
+        X = Y;
+        x = y;
+
+        while (true) {
+            int a;
+            bool b;
+            struct X x;
+            struct Y y;
+
+            a = b;
+            a = "string";
+            a = x;
+            a = X;
+
+            b = a;
+            b = "string";
+            b = y;
+            b = Y;
+
+            b = fn1() == fn2();
+            b = fn1() != fn2();
+            b = X == Y;
+            b = X != Y;
+            b = x == y;
+            b = x != y;
+
+            fn1 = fn2;
+            X = Y;
+            x = y;
+        }
+    }
+}
+///////////////////////////////////////////////////////////////////////////////
+// Test cascading
+bool bbb;
+struct S { int a; };
+struct S t;
+
+void p(int p1, bool p2) {
+}
+
+void cascadeTest1() {
+    int aaa;
+
+    // some errors involving illegal operations on functions
+    aaa =  + p;
+    bbb = p == 3;
+    bbb = p > main;
+    bbb = p == p;
+
+    // some errors involving bad function calls 
+    aaa();
+    p();
+    p(5);
+    p(aaa, aaa);
+    p(t, t.a);
+    S();
+
+    // some errors involving structs 
+    t = 5;
+    t = t;
+    cin >> S;
+    t = true || 3;
+    bbb = S && t.a;
+
+    // error involving return
+    return 10;
+
+    // other type errors 
+    aaa = aaa + (!false);
+    aaa = aaa + "foo";
+    bbb = aaa;
+
+    // don't give too many or too few error messages here 
+    bbb = (aaa + true) && (bbb < true);
+}
+
+void cascadeTest2() {
+    int a;
+    int b;
+    int c;
+    bool x;
+    bool y;
+    bool z;
+
+    a = x * y || b;
+    if (x * y || b + c && a) {
+        int a;
+        int b;
+        int c;
+        bool x;
+        bool y;
+        bool z;
+
+        while (z || b || a && a * z) {
+            int a;
+            int b;
+            int c;
+            bool x;
+            bool y;
+            bool z;
+
+            repeat (a || "string" || c + a) {}
+        }
+    }
+}
+
+
+

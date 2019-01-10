@@ -1,0 +1,59 @@
+struct Num {
+    int i;
+};
+struct Point {
+    int x;
+    int y;
+    struct Num n;
+};
+
+int fn1(int param1, bool param2) {
+    int i;
+
+    return -i * 5 / 3 + param1;
+}
+
+void main() {
+    int a;
+    int b;
+    bool c;
+    bool d;
+    struct Point p;
+
+    a++;
+    b--;
+    cin >> a;
+    cin >> c;
+    //cin >> fn1(a, c);
+    cout << a;
+    cout << c;
+    cout << fn1(a, c);
+
+    if (c || d || true && false) {
+        int a;
+        int b;
+        bool c;
+        bool d;
+
+        while (a == b) {
+            int a;
+            repeat (a * 3) {}
+            if (a == 0) {
+                int a;
+                bool c;
+                a = fn1(a, c);
+            } else {
+                int a;
+                a = -a * 3 / a;
+            }
+        }
+    }
+
+    if ("string1" != "string2") {
+        return;
+    }
+    if (p.x > p.y || p.x > p.n.i || p.x >= p.y || p.y <= p.n.i) {
+        return;
+    }
+
+}
