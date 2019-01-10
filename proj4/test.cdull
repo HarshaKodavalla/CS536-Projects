@@ -1,0 +1,122 @@
+// Test struct variable name analysis
+int test1_a;
+void test1_b() {}
+
+struct test1_c {
+    bool test1_a;
+    int test1_b;
+};
+
+// Test if struct member can have the same name as struct itself
+struct test2 {
+    int test2;
+};
+
+// Test if a function and its variable can share a name
+bool test3() {
+    int test3;
+    test3++;
+}
+
+// Test expressions
+void test4() {
+    int a;
+    int b;
+    bool c;
+    bool d;
+    bool e;
+    
+
+    a = a + b;
+    a = a - b;
+    a = a * b;
+    a = a / b;
+    a = -a;
+    c = true;
+    d = !c;
+    e = c && d;
+    e = c || d;
+    e = c == d
+    e = c != d;
+    e = c > d;
+    e = c >= d;
+    e = c <= d;
+    e = c < d;
+}
+
+// General testing
+struct Coord {
+    int i;
+};
+struct Point {
+    struct Coord x;
+    struct Coord y;
+    int num;
+};
+struct Graph {
+    struct Point p;
+    int num;
+};
+
+int f01(int x, bool b) { }
+
+bool f02() {
+    bool c;
+    return c;
+}
+
+int largeTest(int param1, bool param2, int param3) {
+    int a;
+    int b;
+    bool c;
+    int d;
+    struct Graph g1;
+    struct Graph g2;
+    struct Point p1;
+
+    cout << a;
+    cin >> b;
+
+    g1.num = a;
+    c = a == b;
+    d = (g1.p.x.i) + (g2.p.y.i);
+    a = param1 + g1.p.y.i + param2 - param3 * param2;
+    
+    f01(g2.p.num, p1.num + a, b, c);
+    f01();
+    largeTest();
+
+    if (d == g1.num) {
+        int a;
+        int b;
+        struct Graph g1;
+        struct Graph g2;
+        struct Point p1;
+        b = g1.num + g2.num + p1.num;
+    } else {
+        int a;
+        int b;
+        struct Graph g1;
+        struct Graph g2;
+        struct Point p1;
+        b = g1.num + g2.num + p1.num;
+        while (a > b) {
+            int a;
+            int b;
+            struct Graph g1;
+            struct Graph g2;
+            struct Point p1;
+            b = g1.num + g2.num + p1.num;
+            repeat (g1.num == g2.num) {
+                int a;
+                int b;
+                struct Graph g1;
+                struct Graph g2;
+                struct Point p1;
+                b = g1.num + g2.num + p1.num;
+            }
+        }
+    }
+    return "done";
+
+}

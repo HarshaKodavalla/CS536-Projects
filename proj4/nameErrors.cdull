@@ -1,0 +1,128 @@
+// Test struct naming - ensure it's contents are not processed and
+// multiply declared iden error is thrown
+int test0(int a) {}
+struct test0 {
+    int x;
+    int x;
+};
+
+// Test use of undeclared variables - ensure two undeclared id are thrown
+int test1() {
+    int a;
+    a = b + a;
+    a = b * a + b;
+}
+
+// Test struct multiply defined variables - ensure contents are added
+// and multiply declared id is thrown. 
+struct test2 {
+    int a;
+    int b;
+    int c;
+
+    int x;
+    int x;
+    bool x;
+
+    int d;
+    int e;
+    int f;
+
+    int g;
+    int g;
+};
+
+// Test struct usage without declaration - ensure both undeclared id
+// and dot-access of non-struct type is thrown.
+void test3() {
+    int a;
+    a = b.x;
+}
+
+// Test multiply declared functions - ensure the contents are processed
+// and that four multiply declared ids are thrown.
+
+int test5_a(int param1, bool param2) {
+    int a;
+    int b;
+}
+void test5_a() {
+    int a;
+    int a;
+}
+
+int test5_b;
+
+void test5_b() {
+    int a;
+    int a;
+}
+
+// Test formals - ensure that a multiply declared ids is thrown
+int test6(int param) {
+    bool param;
+    param++;
+}
+
+// Test doubly declared formals and variables - ensure that three multiply
+// declared ids are thrown
+bool test7(int param, int param) {
+    int i;
+    int i;
+
+    int j;
+    int j;
+}
+
+// Test if, else, while and repeat scopes - ensure four undeclared
+// ids are thrown.
+void test9() {
+    int a;
+    int b;
+    int c;
+    if (a == b) {
+        int a;
+        int b;
+        b = c;
+    } else {
+        int a;
+        int b;
+        b = c;
+    }
+    while (a == b) {
+        int a;
+        int b;
+        b = c;
+    }
+    repeat (a == b) {
+        int a;
+        int b;
+        b = c;
+    }
+}
+
+// Test non functions declared as void
+void test10_a;
+
+// Test invalid name of struct type
+int test11_a;
+ 
+void test12_b() {
+    struct test11_a x;
+}
+
+// Test invalid struct field name
+
+struct test13_a {
+    int field1;
+    bool field2;
+};
+
+void test13_b() {
+    int x;
+    struct test13_a y;
+    x = y.nonExist;
+}
+
+
+
